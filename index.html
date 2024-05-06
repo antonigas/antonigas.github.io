@@ -20,18 +20,22 @@
       align-items: center;
       position: relative;
       color: white;
-      font-family: Arial, sans-serif;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
 
     .content {
       width: 80%;
-      opacity: 0.1;
       padding: 20px;
-      background-color: rgba(255, 255, 255, 0.1);
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+    }
+
+    .text-box {
+      background-color: rgba(255, 255, 255, 0.4);
+      padding: 20px;
+      border-radius: 5px;
     }
 
     .subpage {
@@ -71,16 +75,20 @@
 
 <div class="page" id="page1">
   <div class="content">
-    <h1>Main Page 1</h1>
-    <p>Content for main page 1.</p>
+    <div class="text-box">
+      <h1>Main Page 1</h1>
+      <p>Content for main page 1.</p>
+    </div>
   </div>
   <div class="arrow right" onclick="scrollToNextPage('page2')">➡</div>
 </div>
 
 <div class="page hidden" id="page2">
   <div class="content">
-    <h1>Main Page 2</h1>
-    <p>Content for main page 2.</p>
+    <div class="text-box">
+      <h1>Main Page 2</h1>
+      <p>Content for main page 2.</p>
+    </div>
   </div>
   <div class="arrow left" onclick="scrollToPrevPage('page1')">⬅</div>
   <div class="arrow right" onclick="scrollToNextPage('subpage1')">➡</div>
@@ -88,6 +96,10 @@
 
 <div class="page hidden" id="subpage1">
   <div class="content">
+    <div class="text-box">
+      <h1>Sub Page 1</h1>
+      <p>Content for sub page 1.</p>
+    </div>
     <div class="subpage">
       <div>
         <img src="image1.jpg" alt="Image 1">
